@@ -450,7 +450,7 @@ commandEncoder.copyBufferToBuffer(
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-一旦输出数据可用于 `stagingBuffer`，我们使用 {{domxref("GPUBuffer.mapAsync()")}} 方法将数据映射到中间内存，并使用 {{domxref("GPUBuffer.getMappedRange()")}} 获取映射范围的引用，将数据复制到 JavaScrip，并将其记录到控制台。完成后，我们还会取消映射到 `stagingBuffer`。
+一旦输出数据可用于 `stagingBuffer`，我们使用 {{domxref("GPUBuffer.mapAsync()")}} 方法将数据映射到中间内存，并使用 {{domxref("GPUBuffer.getMappedRange()")}} 获取映射范围的引用，将数据复制到 JavaScript，并将其记录到控制台。完成后，我们还会取消映射到 `stagingBuffer`。
 
 ```js
 // 映射 staging 缓冲区，以便读回到 JS
